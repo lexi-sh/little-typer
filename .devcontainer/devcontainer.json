@@ -3,9 +3,7 @@
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   "features": {
     "ghcr.io/devcontainers/features/common-utils:2": {},
-    "ghcr.io/devcontainers/features/git:1": {},
-    "ghcr.io/devcontainers/features/curl:1": {},
-    "ghcr.io/devcontainers/features/bash:1": {}
+    "ghcr.io/devcontainers/features/git:1": {}
   },
   "postCreateCommand": "./install.sh",
   "customizations": {
