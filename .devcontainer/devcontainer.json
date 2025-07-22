@@ -3,9 +3,17 @@
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   "features": {
     "ghcr.io/devcontainers/features/common-utils:2": {},
-    "ghcr.io/devcontainers/features/git:1": {}
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/wxw-matt/devcontainer-features/apt:latest": {
+			"packages": "build-essential curl libffi-dev libncurses-dev"
+    },
+    "ghcr.io/wxw-matt/devcontainer-features/command_runner:latest": {
+			"command1": "curl -L 'https://download.racket-lang.org/installers/8.12/racket-8.12-x86_64-linux.sh' -o /usr/local/bin/racket-install",
+			"command2": "chmod +x /usr/local/bin/racket-install",
+      "command3": "/usr/local/bin/racket-install --in-place --dest /usr/local/racket",
+      "command4": "/usr/local/racket/bin/raco pkg install --auto pie"
+    }
   },
-  "postCreateCommand": "./install.sh",
   "customizations": {
     "vscode": {
       "extensions": [
